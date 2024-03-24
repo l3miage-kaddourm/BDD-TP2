@@ -6,11 +6,11 @@ import javax.persistence.ManyToMany;
 import java.util.Set;
 
 @Entity
-public class ClubSportif {
+public class EtudiantEntity {
     @Id
-    private Long id;
+    private Long agalan;
     private String nom;
-    private String description;
-    @ManyToMany
-    private Set<Etudiant> etudiants;
+    private String email;
+    @ManyToMany(mappedBy = "etudiants")
+    private Set<ClubSportifEntity> clubSportifEntities;
 }

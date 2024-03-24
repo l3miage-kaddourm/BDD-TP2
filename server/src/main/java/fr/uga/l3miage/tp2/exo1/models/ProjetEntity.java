@@ -21,7 +21,6 @@ public class ProjetEntity {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "developerEntities")
     @ManyToMany
     private Set<DeveloperEntity> developerEntities;
 }

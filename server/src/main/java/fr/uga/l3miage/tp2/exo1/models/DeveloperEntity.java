@@ -18,7 +18,6 @@ public class DeveloperEntity {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "projetEntities")
     @ManyToMany(mappedBy = "developerEntities")
     private Set<ProjetEntity> projetEntities;
 }
