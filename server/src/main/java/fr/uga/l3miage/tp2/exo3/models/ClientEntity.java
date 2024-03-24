@@ -3,15 +3,15 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-public class Client {
+public class ClientEntity {
     @Id
     private Long id;
     private String nom;
     private String email;
 
     @OneToMany(mappedBy = "client")
-    private Set<Commande> commandes;
+    private Set<CommandeEntity> commandeEntities;
 
     @OneToOne
-    private Adresse adresse;
+    private AdresseEntity adresseEntity;
 }

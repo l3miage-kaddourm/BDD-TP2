@@ -4,15 +4,15 @@ import java.util.Date;
 import java.util.Set;
 
 @Entity
-public class Commande {
+public class CommandeEntity {
     @Id
     private Long id;
     private Date date;
     private double montantTotal;
 
     @ManyToOne
-    private Client client;
+    private ClientEntity clientEntity;
 
     @OneToMany(mappedBy = "commande")
-    private Set<Produit> produits;
+    private Set<ProduitEntity> produitEntities;
 }

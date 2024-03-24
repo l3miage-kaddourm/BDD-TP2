@@ -4,11 +4,11 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-public class CategorieDeProduit {
+public class CategorieDeProduitEntity {
     @Id
     private Long id;
     private String nom;
 
     @OneToMany(mappedBy = "categorie")
-    private Set<Produit> produits;
+    private Set<ProduitEntity> produitEntities;
 }
