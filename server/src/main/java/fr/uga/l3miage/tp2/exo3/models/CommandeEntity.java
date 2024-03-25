@@ -13,6 +13,7 @@ public class CommandeEntity {
     @ManyToOne
     private ClientEntity clientEntity;
 
-    @OneToMany(mappedBy = "commande")
+    @OneToMany
+    @JoinColumn(name = "id_produit",referencedColumnName = "id")
     private Set<ProduitEntity> produitEntities;
 }
