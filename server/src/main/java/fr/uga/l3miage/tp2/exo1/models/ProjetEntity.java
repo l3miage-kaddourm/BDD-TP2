@@ -2,14 +2,12 @@ package fr.uga.l3miage.tp2.exo1.models;
 
 import lombok.Cleanup;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.math.BigInteger;
 import java.util.Set;
 
 @Entity
+@Table(name = "projet")
 public class ProjetEntity {
     @Id
     @Column(name = "id")
@@ -21,6 +19,6 @@ public class ProjetEntity {
     @Column(name = "description")
     private String description;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "projetEntities")
     private Set<DeveloperEntity> developerEntities;
 }

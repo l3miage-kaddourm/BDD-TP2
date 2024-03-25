@@ -1,12 +1,10 @@
 package fr.uga.l3miage.tp2.exo1.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity
+@Table(name = "developer_miage")
 public class DeveloperEntity {
     @Id
     @Column(name = "lastName")
@@ -18,6 +16,6 @@ public class DeveloperEntity {
     @Column(name = "email")
     private String email;
 
-    @ManyToMany(mappedBy = "developerEntities")
+    @ManyToMany
     private Set<ProjetEntity> projetEntities;
 }
